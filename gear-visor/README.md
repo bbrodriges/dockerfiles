@@ -17,11 +17,38 @@ gearman:
 visor:
   image: bbrodriges/gear-visor
   restart: always
+  links:
+  - gearman
   ports:
   - "127.0.0.1:8840:5000"
   volumes:
   - "./gear_visor_settings.py:/app/gear_visor_settings.py"
 
+```
+
+# Settings overriding
+
+```python
+# custom gear_visor_settings.py content
+# discribes 3 gearman servers
+
+SERVERS = [
+    {
+        'alias': 'Jobs',
+        'host': '76.28.54.120',
+        'port': 4730
+    },
+    {
+        'alias': 'Wozniak',
+        'host': 'localhost',
+        'port': 4730
+    },
+    {
+        'alias': 'Ive',
+        'host': 'dev.mysite.com',
+        'port': 5468
+    }
+]
 ```
 
 # Source
