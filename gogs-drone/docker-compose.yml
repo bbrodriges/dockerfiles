@@ -1,0 +1,26 @@
+gogs:
+  image: gogs/gogs:latest
+  volumes:
+  - "./gogs:/data"
+  ports:
+  - "127.0.0.1:3030:3000"
+  - "127.0.0.1:2020:22"
+  links:
+  - mysql
+
+drone:
+  image: drone/drone:latest
+  volumes:
+  - "./drone/:/var/lib/drone/"
+  ports:
+  - "127.0.0.1:3040:8000"
+  links:
+  - gogs
+  environment:
+    REMOTE_DRIVER: gogs
+    REMOTE_CONFIG: http://gogs:3000/?open=false
+
+mysql:
+  image: mysql:5.7
+  environment:
+    MYSQL_ROOT_PASSWORD: "12345"
