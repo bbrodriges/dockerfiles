@@ -4,6 +4,7 @@ MAINTAINER bender.rodriges <bender.rodriges@gmail.com>
 RUN set -ex \
 	&& apk add --no-cache --virtual .build-deps \
 		curl \
+		git \
 	\
 	&& curl https://glide.sh/get | sh \
 	\
