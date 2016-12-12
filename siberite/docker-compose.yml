@@ -1,0 +1,7 @@
+siberite:
+  image: siberite:manual
+  volumes:
+  - "data:/siberite-data"
+  ports:
+  - "127.0.0.1:22133:22133"
+  restart: always
