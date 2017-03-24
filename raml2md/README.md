@@ -1,3 +1,7 @@
+# Notice
+
+[DEPRECATED] Please use bbrodriges/raml2html with the ```-e "FORMAT=md"``` instead.
+
 # raml2md
 
 Simple container to convert RAML files to Markdown.

@@ -16,6 +16,4 @@ VOLUME /siberite-data
 
 WORKDIR siberite-0.6.2-linux_x86_64
 
-RUN ls -la
-
-CMD ["./siberite", "-listen", "localhost:22133", "-data", "./data"]
+CMD ["./siberite", "-listen", "localhost:22133", "-data", "/siberite-data"]
