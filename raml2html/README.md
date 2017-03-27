@@ -13,7 +13,7 @@ docker run --rm -v <path_to_raml_files>:/app -e "INPUT=index.raml" -e "OUTPUT=in
 Using custom template:
 
 ```
-docker run --rm -v <path_to_raml_files>:/app -e "INPUT=index.raml" -e "OUTPUT=index.html" -e "TPL=template.nunjucks" bbrodriges/raml2html
+docker run --rm -v <path_to_raml_files>:/app -e "INPUT=index.raml" -e "OUTPUT=index.html" -e "FORMAT=custom" -e "TPL=template.nunjucks" bbrodriges/raml2html
 ```
 
 Markdown output:
