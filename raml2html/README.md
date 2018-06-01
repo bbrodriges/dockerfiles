@@ -28,6 +28,12 @@ Slate theme output:
 docker run --rm -v <path_to_raml_files>:/app -e "INPUT=index.raml" -e "OUTPUT=index.html" -e "FORMAT=slate" bbrodriges/raml2html
 ```
 
+Material theme output:
+
+```
+docker run --rm -v <path_to_raml_files>:/app -e "INPUT=index.raml" -e "OUTPUT=index.html" -e "FORMAT=material" bbrodriges/raml2html
+```
+
 # Credits
 
 Based on `https://github.com/raml2html/raml2html`
